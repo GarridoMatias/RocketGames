@@ -4,7 +4,7 @@ import { Game } from './Game';
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
-  styleUrls: ['./game-list.component.css']
+  styleUrls: ['./game-list.component.scss']
 })
 export class GameListComponent implements OnInit {
 
@@ -17,8 +17,8 @@ export class GameListComponent implements OnInit {
     "tipo" : " genero",
     "precio": 1,
     "stock": 1,
-    "destacado": false,
-    "agregado" : false
+    "destacado": true,
+    "agregado" : false,
   },
   {
     "nombre": "Harry Potter y la Piedra Filosofal",
@@ -28,7 +28,7 @@ export class GameListComponent implements OnInit {
     "precio": 1900,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Sackboy: A Big Adventure",
@@ -38,7 +38,7 @@ export class GameListComponent implements OnInit {
     "precio": 12,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Mario Kart",
@@ -48,7 +48,7 @@ export class GameListComponent implements OnInit {
     "precio": 123,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Plantas & Zombies 3",
@@ -58,7 +58,7 @@ export class GameListComponent implements OnInit {
     "precio": 3,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Stumble Guys",
@@ -68,7 +68,7 @@ export class GameListComponent implements OnInit {
     "precio": 11,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "A Game of Thrones",
@@ -78,7 +78,7 @@ export class GameListComponent implements OnInit {
     "precio": 1,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "God of War",
@@ -88,7 +88,7 @@ export class GameListComponent implements OnInit {
     "precio": 2,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Minecraft",
@@ -98,7 +98,7 @@ export class GameListComponent implements OnInit {
     "precio": 412,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   },
   {
     "nombre": "Escuadron S6",
@@ -108,7 +108,7 @@ export class GameListComponent implements OnInit {
     "precio": 11,
     "stock": 1,
     "destacado": false,
-    "agregado" : false
+    "agregado" : false,
   }
 ]
 

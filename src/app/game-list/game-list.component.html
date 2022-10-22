@@ -1,11 +1,29 @@
-<div class="card-group">
-    <div class="card text-bg-dark" *ngFor="let game of games">
-        <img class=" card-img" [src]="game.imagen " alt=" ">
-        <div class="card-img-overlay botton">
-            <h5 class="card-title ">{{game.nombre}}</h5>
-            <p class="card-text "><small>{{game.tipo}}</small></p>
-            <p class="card-text "><small>{{game.stock}}</small></p>
-            <a href="# " class="btn btn-primary ">Agregar al carrito</a>
+<div class="d-flex flex-row flex-wrap container-cards">
+    <div class="card text-bg-dark container-card justify-content-center align-items-center" *ngFor="let game of games" [ngClass]="{destacado:game.destacado}">
+
+        <img class="card-img" [src]="game.imagen" [alt]="game.nombre">
+
+
+        <div class="card-img-overlay d-flex flex-column justify-content-between align-items-center text-center">
+            <div>
+                <h5 class="card-title ">{{game.nombre}}</h5>
+
+                <p class="card-text" *ngIf="game.destacado">
+                    <span class="badge text-bg-danger color-white">
+                            Lanzamiento
+                        </span>
+                </p>
+
+            </div>
+
+            <div>
+                <p class="card-text ">
+                    <span class="badge rounded-pill text-bg-secondary">
+                        {{game.tipo}}
+                    </span>
+                </p>
+                <a href="# " class="btn btn-primary ">Agregar al carrito</a>
+            </div>
         </div>
     </div>
 </div>
