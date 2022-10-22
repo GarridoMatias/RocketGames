@@ -1,1 +1,11 @@
-<p>game-list works!</p>
+<div class="card-group">
+    <div class="card text-bg-dark" *ngFor="let game of games">
+        <img class=" card-img" [src]="game.imagen " alt=" ">
+        <div class="card-img-overlay botton">
+            <h5 class="card-title ">{{game.nombre}}</h5>
+            <p class="card-text "><small>{{game.tipo}}</small></p>
+            <p class="card-text "><small>{{game.stock}}</small></p>
+            <a href="# " class="btn btn-primary ">Agregar al carrito</a>
+        </div>
+    </div>
+</div>
