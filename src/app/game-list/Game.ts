@@ -1,4 +1,5 @@
 export interface Game{
+    cantidad: number;
     nombre : string;
     imagen : string;
     descripcion: string;

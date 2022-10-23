@@ -4,13 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { RocketgamesGamesComponent } from './rocketgames-games/rocketgames-games.component';
+import { RocketgamesAboutComponent } from './rocketgames-about/rocketgames-about.component';
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
-    GameListComponent
+    GameListComponent,
+    RocketgamesGamesComponent,
+    RocketgamesAboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
