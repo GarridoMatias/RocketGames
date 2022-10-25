@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { GameCartService } from '../game-cart.service';
 import { Game } from './Game';
 
 @Component({
@@ -123,18 +124,16 @@ export class GameListComponent implements OnInit {
   }
 ]
 
-  constructor() { }
+
+  constructor(private cart: GameCartService) {}
 
   ngOnInit(): void {
   }
 
-  upCantidad(game: Game):void{
-    if(game.stock>game.cantidad)
-    game.cantidad++;
-  }
-  downCantidad(game: Game):void{
-    if(game.cantidad>0)
-    game.cantidad--;
+  addToCart(game: Game): void{
+    this.cart.addToCart(game);
+    game.stock-= game.cantidad;
+    game.cantidad = 0;
   }
 
 

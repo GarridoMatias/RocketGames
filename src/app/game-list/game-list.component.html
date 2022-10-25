@@ -19,14 +19,10 @@
                 </p>
             </div>
 
-            <div>
+            <div class="justify-content-center">
 
-                <div class="d-flex justify-content-center">
-                    <button class="btn btn-primary" (click)="downCantidad(game)">-</button>
-                    <input style="width: 15%;" class=" card-text text-center" type="text" [(ngModel)]="game.cantidad">
-                    <button class="btn btn-primary" (click)="upCantidad(game)">+</button>
-                </div>
-                <a href="# " class="btn btn-primary">Agregar al carrito</a>
+                <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock" *ngIf="game.stock "></app-input-integer>
+                <button class="btn btn-primary" (click)="addToCart(game)">Agregar al carrito</button>
             </div>
         </div>
     </div>

@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { RocketgamesGamesComponent } from './rocketgames-games/rocketgames-games.component';
 import { RocketgamesAboutComponent } from './rocketgames-about/rocketgames-about.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { GameCartComponent } from './game-cart/game-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
     RocketgamesGamesComponent,
-    RocketgamesAboutComponent
+    RocketgamesAboutComponent,
+    InputIntegerComponent,
+    GameCartComponent
   ],
   imports: [
     BrowserModule,
