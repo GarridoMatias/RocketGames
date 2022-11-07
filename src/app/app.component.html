@@ -1,34 +1,111 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">RocketGames</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" [routerLink]="['/']">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " [routerLink]="['about']">About</a>
-                </li>
-            </ul>
-        </div>
+<header class="row align-items-center">
+    <div class="col-1">
+        <a href="javascript:void(0)" id="btn-sidebar-menu">
+            <img src="../assets/icons/menu.png" alt="menu" class="i-menu">
+        </a>
     </div>
-</nav>
+
+    <div class="col-2">
+
+        <a href="index.html" class="logo">
+            <img src="../assets/logo/logo_Mesa de trabajo 1.png" alt="logo.png">
+        </a>
+    </div>
+
+    <div class="col-8 row text-center">
+        <a class=" col " href=" ">HOME</a>
+        <a class="col " href=" ">NOSOTROS</a>
+        <a class="col " href=" ">HOME</a>
+    </div>
+    <div class="col-1 justify-content-end ">
+        <a href=""><img src="../assets/icons/user.png " class="i-user icono "></a>
+        <a href=""><img src="../assets/icons/carrito1.png " class="i-carrito icono "></a>
+    </div>
+</header>
 
 <router-outlet></router-outlet>
 
 
-<header class="container-header">
-    <a href="javascript:void(0)" id="btn-sidebar-menu">
-        <img src="./icons/menu.png" class="i-menu">
-    </a>
-    <a href="index.html" class="logo">
-        <img src="./logo/logo_Mesa de trabajo 1.png" alt="logo.png">
-    </a>
-    <div class="container-accesos-user">
-        <a href=""><img src="./icons/user.png" class="i-user icono"></a>
-        <a href=""><img src="./icons/carrito1.png" class="i-carrito icono"></a>
+<footer class="bg-dark text-white ">
+
+    <div class="row text-center justify-content-evenly ">
+        <div class="col ">
+            <h3>Ayuda</h3>
+            <div>
+                <a href=" ">FAQs</a>
+            </div>
+            <div>
+                <a href=" ">Contacto</a>
+            </div>
+        </div>
+
+        <div class="col ">
+            <h3>Servicios</h3>
+            <div>
+                <a href=" ">Consegui actualizaciones</a>
+            </div>
+            <div>
+                <a href=" ">Productos</a>
+            </div>
+        </div>
+
+        <div class="col ">
+            <h3>Nosotros</h3>
+            <div class="contenido-nosotros ">
+
+                <a href=" ">Equipo</a>
+                <div class="row ">
+
+                    <p class=" ">Follow us</p>
+                    <div>
+                        <a href=" ">
+                            <img class="facebook " src="../assets/icons/instagram.png " alt="instagram.png " class="i-instagram icono ">
+                        </a>
+                        <a href=" ">
+                            <img class="fab " src="../assets/icons/facebook.png " alt="facebook.png " class="i-facebook icono ">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</header>
+
+    <div class="container ">
+        <div class="row ">
+
+            <div class="col-3 ">
+                <img src="../assets/logo/logo_Mesa de trabajo 1.png " alt="logo.png ">
+            </div>
+
+            <div class="col text-center p-3 ">
+                <div class="row container-terminos ">
+
+                    <div class="col ">
+                        <a href=" ">Terminos y condiciones</a>
+                    </div>
+                    <div class="col ">
+                        <a href=" ">Politicas de privacidad</a>
+                    </div>
+                    <div class="col ">
+                        <a href=" ">Licencia</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" p-3 ">
+            <p class="text-center ">Copyrigth © RocketGames 2022 . Rocket Corpotarion</p>
+            <div class="row ">
+                <p class="col text-end ">Powered by &nbsp</p>
+                <div class="col justify-content-end ">
+                    <a href=" ">Grupo 17</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>

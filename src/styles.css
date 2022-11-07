@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/*ALL*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #2ec0f9;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+:root {
+    --primary-color: #2ec0f9;
+    --secondary-color: #14191D;
+    --paleta3-color: #7334FA;
+    --paleta4-color: #E82F9E;
+}
