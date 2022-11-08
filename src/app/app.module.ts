@@ -10,7 +10,6 @@ import { RocketgamesAboutComponent } from './rocketgames-about/rocketgames-about
 import { AppRoutingModule } from './app-routing.module';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { GameCartComponent } from './game-cart/game-cart.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    IvyCarouselModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
