@@ -7,29 +7,33 @@ import { Game } from './Game';
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.scss'],
-});
+})
 
-// https://postimg.cc/gLRdVjfn 000destacado
+// https://i.postimg.cc/5yK0MFgq/000destacado.jpg
 // https://postimg.cc/ftShskWB personaje06
-// https://postimg.cc/gLvFw5Zh cargando
-// https://postimg.cc/yD64dLYJ imgDESCRIPCION-100
-// https://postimg.cc/CZWQj7Ys imgDESCRIPCION-100
-// https://postimg.cc/DmsKYWMz imgsSTARS-1-100
-// https://postimg.cc/2bZgJJTt imgsSTARS-1-100
-// https://postimg.cc/nCGfpyZb imgsSTARS-2-100
-// https://postimg.cc/0KGF5wTd imgsSTARS-2-100
-// https://postimg.cc/MfJg8DFp imgsSTARS-4-100
-// https://postimg.cc/PLcBShbZ imgsSTARS-4-100
-// https://postimg.cc/fJZ128dH personaje-1-100
-// https://postimg.cc/21SMm32h personaje-2-100
-// https://postimg.cc/SJr3wc7m personaje-3-100
-// https://postimg.cc/bZVMv8BM personaje-4-100
-// https://postimg.cc/kVVH6zr5 personaje-5-100
-// https://postimg.cc/64KbPQ87 personaje-6-100
+// https://i.postimg.cc/T1sRsv2t/cargando.jpg
+// https://i.postimg.cc/sg7VTLkJ/img-DESCRIPCION-100.jpg
+// https://i.postimg.cc/633xxbmg/img-DESCRIPCION-100.png
+// https://i.postimg.cc/tRvCJWdF/imgs-STARS-1-100.jpg
+// https://i.postimg.cc/76sDCrzq/imgs-STARS-1-100.jpg
+// https://i.postimg.cc/QxR8kDyt/imgs-STARS-2-100.jpg
+// https://i.postimg.cc/fy1NK75F/imgs-STARS-2-100.jpg
+// https://i.postimg.cc/WzdVgYmg/imgs-STARS-3-100.jpg
+// https://i.postimg.cc/9XkCCVVp/imgs-STARS-4-100.jpg
+// https://i.postimg.cc/C1LSLxzv/imgs-STARS-4-100.jpg
+// https://i.postimg.cc/xTbYd71S/personaje-1-100.jpg
+// https://i.postimg.cc/BnT0TKFY/personaje-2-100.jpg
+// https://i.postimg.cc/Njqt24K2/personaje-3-100.jpg
+// https://i.postimg.cc/fbMhBRjw/personaje-4-100.jpg
+// https://i.postimg.cc/wBFYPY0D/personaje-5-100.jpg
+// https://i.postimg.cc/JnP7bBfV/006personaje.webp
+// https://i.postimg.cc/RhJrN69T/personaje-6-100.jpg
+// https://i.postimg.cc/HxhDY4Gx/personaje-7-100.jpg
+// https://i.postimg.cc/XqRRFjY6/personaje-8-100.jpg
 // https://postimg.cc/JDZdKXzV personaje-7-100
 // https://postimg.cc/64hbxNZM personaje-8-100
 
-// https://postimg.cc/NL7Qj97z starciticenpage-100
+// https://i.postimg.cc/05hjZ76P/starciticenpage-100.jpg
 
 
 
