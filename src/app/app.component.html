@@ -13,9 +13,9 @@
     </div>
 
     <div class="col-8 row text-center">
-        <a class=" col " href=" ">HOME</a>
-        <a class="col " href=" ">NOSOTROS</a>
-        <a class="col " href=" ">HOME</a>
+        <a class="col" [routerLink]="['/home']">HOME</a>
+        <a class="col" [routerLink]="['/about']">NOSOTROS</a>
+        <a class="col" [routerLink]="['/contacto']">CONTACTO</a>
     </div>
     <div class="col-1 justify-content-end ">
         <a href=""><img src="../assets/icons/user.png " class="i-user icono "></a>
@@ -23,8 +23,9 @@
     </div>
 </header>
 
-<router-outlet></router-outlet>
-
+<div>
+    <router-outlet></router-outlet>
+</div>
 
 <footer class="bg-dark text-white ">
 

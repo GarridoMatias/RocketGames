@@ -2,12 +2,18 @@ import { RocketgamesGamesComponent } from './rocketgames-games/rocketgames-games
 import { NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
 import { RocketgamesAboutComponent } from './rocketgames-about/rocketgames-about.component';
+import { RocketgamesContactoComponent } from './rocketgames-contacto/rocketgames-contacto.component';
+import { RocketgamesHomeComponent } from './rocketgames-home/rocketgames-home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'games',
+    redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    component:RocketgamesHomeComponent,
   },
   {
     path: 'games',
@@ -16,6 +22,10 @@ const routes: Routes = [
   {
     path : 'about',
     component:RocketgamesAboutComponent,
+  },
+  {
+    path : 'contacto',
+    component:RocketgamesContactoComponent,
   }
 ];
 
