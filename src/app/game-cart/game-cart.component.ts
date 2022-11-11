@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, observable } from 'rxjs';
 import { GameCartService } from '../game-cart.service';
+import { Game } from '../game-list/Game';
 
 @Component({
   selector: 'app-game-cart',
@@ -8,7 +10,15 @@ import { GameCartService } from '../game-cart.service';
 })
 export class GameCartComponent implements OnInit {
 
-  constructor(private cart: GameCartService) {}
+  cartList$: Observable<Game[]>;
+  constructor(private cart: GameCartService) {
+    this.cartList$ = cart.cartList.asObservable();
+    }
+
+  removeToCart(game:Game):void{
+
+    this.cart.removeToCart(game);
+  }
 
   ngOnInit(): void {
   }

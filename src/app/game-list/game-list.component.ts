@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { GameCartService } from '../game-cart.service';
 import { Game } from './Game';
@@ -34,10 +35,6 @@ import { Game } from './Game';
 // https://postimg.cc/64hbxNZM personaje-8-100
 
 // https://i.postimg.cc/05hjZ76P/starciticenpage-100.jpg
-
-
-
-
 
 
 
@@ -165,13 +162,18 @@ export class GameListComponent implements OnInit {
     },
   ];
 
-  constructor(private cart: GameCartService) {}
+  constructor(private cart: GameCartService) {
+  }
 
   ngOnInit(): void {}
 
   addToCart(game: Game): void {
     this.cart.addToCart(game);
-    game.stock -= game.cantidad;
-    game.cantidad = 0;
+    game.agregado= !game.agregado;
+
+  }
+  removeToCart(game:Game):void{
+    this.cart.removeToCart(game);
+
   }
 }

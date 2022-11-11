@@ -1,5 +1,5 @@
 <div class="d-flex flex-row flex-wrap container-cards">
-    <div class="card text-bg-dark container-card justify-content-center align-items-center" *ngFor="let game of games" [ngClass]="{destacado:game.destacado}">
+    <div *ngFor="let game of games" [ngClass]="{destacado:game.destacado}" class="card text-bg-dark container-card justify-content-center align-items-center">
 
         <img class="card-img" [src]="game.imagen" [alt]="game.nombre">
 
@@ -22,8 +22,10 @@
                         {{game.tipo}}
                     </span>
                 </p>
-                <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock" *ngIf="game.stock "></app-input-integer>
-                <a href="# " class="btn btn-primary ">Agregar al carrito</a>
+                <!-- <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock" *ngIf="game.stock "></app-input-integer> -->
+
+                <button (click)="removeToCart(game)" class="btn btn-primary" *ngIf="game.agregado">Quitar de carrito</button>
+                <button (click)="addToCart(game)" class="btn btn-primary" *ngIf="!game.agregado">Agregar al carrito</button>
             </div>
         </div>
     </div>
