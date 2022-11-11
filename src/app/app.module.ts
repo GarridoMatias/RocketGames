@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
 import { RocketgamesGamesComponent } from './rocketgames-games/rocketgames-games.component';
 import { RocketgamesAboutComponent } from './rocketgames-about/rocketgames-about.component';
@@ -28,7 +30,8 @@ import { GameCartComponent } from './game-cart/game-cart.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-     
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
