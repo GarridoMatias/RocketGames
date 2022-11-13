@@ -5,12 +5,10 @@
         <td>Nombre</td>
         <td>Precio</td>
         <td></td>
-        <td></td>
     </tr>
-    <tr *ngFor="let game of cartList$ | async">
+    <tr *ngFor="let game of games">
         <td>{{game.nombre}}</td>
         <td>{{game.precio}}</td>
         <td><button (click)="removeToCart(game)">quitar</button></td>
-        <td><button>comprar</button></td>
     </tr>
 </table>

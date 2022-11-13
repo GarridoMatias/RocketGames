@@ -10,14 +10,19 @@ import { Game } from '../game-list/Game';
 })
 export class GameCartComponent implements OnInit {
 
-  cartList$: Observable<Game[]>;
+  games : Game[] =[];
+
   constructor(private cart: GameCartService) {
-    this.cartList$ = cart.cartList.asObservable();
+      // Subscribe to cartService changes
+      this.cart.items.subscribe(data => {
+        this.games = data;
+      });
     }
 
   removeToCart(game:Game):void{
 
     this.cart.removeToCart(game);
+    game.agregado= !game.agregado;
   }
 
   ngOnInit(): void {

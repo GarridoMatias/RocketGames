@@ -24,6 +24,11 @@
                 </p>
                 <!-- <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock" *ngIf="game.stock "></app-input-integer> -->
 
+                <p class="card-text" *ngIf="game.agregado">
+                    <span class="badge text-bg-info color-white">
+                          ADQUIRIDO
+                      </span>
+                </p>
                 <button (click)="removeToCart(game)" class="btn btn-primary" *ngIf="game.agregado">Quitar de carrito</button>
                 <button (click)="addToCart(game)" class="btn btn-primary" *ngIf="!game.agregado">Agregar al carrito</button>
             </div>

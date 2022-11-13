@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Game } from './game-list/Game';
 
 @Injectable({
@@ -8,13 +8,15 @@ import { Game } from './game-list/Game';
 export class GameCartService {
 
   private _cartList:Game[]= [];
-  cartList:BehaviorSubject<Game[]>= new BehaviorSubject(this._cartList);
+  private cartList:BehaviorSubject<Game[]>= new BehaviorSubject(this._cartList);
+  public items : Observable<Game[]> = this.cartList.asObservable();
 
   constructor() { }
 
   removeToCart(game: Game){
-    game.agregado = !game.agregado;
     let gameBuscar = this._cartList.find((buscado) => buscado.nombre == game.nombre);
+    game.agregado= !game.agregado;
+
 
     if(gameBuscar){
       this._cartList = this._cartList.filter((gameBorrar)=> gameBorrar.nombre !== game.nombre);
@@ -29,8 +31,10 @@ export class GameCartService {
 
     if(!item){
       this._cartList.push({... game});
+    game.agregado= !game.agregado;
+
     }else{
-      game.agregado= !game.agregado;
+
     }
 
     this.cartList.next(this._cartList);
