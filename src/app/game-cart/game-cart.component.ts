@@ -21,8 +21,8 @@ export class GameCartComponent implements OnInit {
 
   removeToCart(game:Game):void{
 
-    this.cart.removeToCart(game);
     game.agregado= !game.agregado;
+    this.cart.removeToCart(game);
   }
 
   ngOnInit(): void {

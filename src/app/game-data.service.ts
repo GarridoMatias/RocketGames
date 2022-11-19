@@ -12,7 +12,6 @@ const httpOptions = {
   })
 };
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,10 +25,10 @@ export class GameDataService {
                 tap( (games: Game[])=> games.forEach(game => game.cantidad = 0 ))
               );
   }
-  public get(){
 
+  public updateGameApi(game: Game){
+     return this.http.put((URL+'/'+game.id),game);
   }
-
 
   addGame(game: Game): Observable<Game[]> {
     return this.http.post<Game[]>(URL, game, httpOptions);

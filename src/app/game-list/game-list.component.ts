@@ -1,5 +1,5 @@
 import { Component, IterableDiffers, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { GameCartService } from '../game-cart.service';
 import { GameDataService } from '../game-data.service';
@@ -15,7 +15,8 @@ import { Game } from './Game';
 
 
 export class GameListComponent implements OnInit {
-  games: Game[] = [];
+
+  games : Game[] =[];
   // gamesParaApi: Game[] = [{
   //   nombre: 'BloodBorne',
   //   imagen: 'https://i.postimg.cc/htdGHvdT/001juego-bloodborne.jpg',
@@ -152,22 +153,32 @@ export class GameListComponent implements OnInit {
 
     // }
     this.gamesDataService.getAll()
-    .subscribe(games =>this.games = games);
-
-
-
+    .subscribe(games =>{
+      this.games = games
+      games.forEach(game=>{
+        if(game.agregado){
+          this.cart.addToCart(game);
+        }
+      })
+    });
   }
 
-  get(){
-    return this.games;
+
+  updateGame(game:Game){
+    this.gamesDataService.updateGameApi(game).subscribe();
+
   }
 
   addToCart(game: Game): void {
+    game.agregado= !game.agregado;
     this.cart.addToCart(game);
+    this.updateGame(game);
 
   }
   removeToCart(game:Game):void{
+    game.agregado= !game.agregado;
     this.cart.removeToCart(game);
+    this.updateGame(game);
 
   }
 }
