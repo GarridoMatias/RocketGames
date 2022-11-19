@@ -9,7 +9,7 @@
                 <h5 class="card-title ">{{game.nombre}}</h5>
 
                 <p class="card-text" *ngIf="game.destacado">
-                    <span class="badge text-bg-danger color-white">
+                    <span class="badge text-bg-warning color-white">
                             Lanzamiento
                         </span>
                 </p>
@@ -29,7 +29,7 @@
                           ADQUIRIDO
                       </span>
                 </p>
-                <button (click)="removeToCart(game)" class="btn btn-primary" *ngIf="game.agregado">Quitar de carrito</button>
+                <button (click)="removeToCart(game)" class="btn btn-danger" *ngIf="game.agregado">Quitar de carrito</button>
                 <button (click)="addToCart(game)" class="btn btn-primary" *ngIf="!game.agregado">Agregar al carrito</button>
             </div>
         </div>

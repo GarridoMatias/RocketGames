@@ -154,15 +154,15 @@ export class GameListComponent implements OnInit {
     // }
     this.gamesDataService.getAll()
     .subscribe(games =>{
-      this.games = games
-      games.forEach(game=>{
-        if(game.agregado){
-          this.cart.addToCart(game);
-        }
-      })
+        this.games = games
+        games.forEach(game=>{
+          if(game.agregado){
+            this.cart.addToCart(game);
+            console.log("cargo")
+          }
+        })
     });
   }
-
 
   updateGame(game:Game){
     this.gamesDataService.updateGameApi(game).subscribe();

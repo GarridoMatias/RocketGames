@@ -18,14 +18,10 @@ export class GameCartComponent implements OnInit {
         this.games = data;
       });
     }
-
-  removeToCart(game:Game):void{
-
-    game.agregado= !game.agregado;
-    this.cart.removeToCart(game);
-  }
-
   ngOnInit(): void {
   }
 
+  total():number{
+    return this.cart.total();
+  }
 }

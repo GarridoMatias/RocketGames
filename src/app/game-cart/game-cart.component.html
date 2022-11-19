@@ -1,14 +1,18 @@
 <h2>Carrito de compras</h2>
 
+<div class="d-flex justify-content-between">
+    <h3>{{total() | currency}}</h3>
+    <button class="btn btn-success">Finaliza compra</button>
+</div>
 <table class="table">
     <tr>
         <td>Nombre</td>
         <td>Precio</td>
-        <td></td>
+
     </tr>
     <tr *ngFor="let game of games">
         <td>{{game.nombre}}</td>
-        <td>{{game.precio}}</td>
-        <td><button (click)="removeToCart(game)">quitar</button></td>
+        <td>{{game.precio | currency}}</td>
+
     </tr>
 </table>

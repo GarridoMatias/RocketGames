@@ -16,12 +16,10 @@ export class GameCartService {
   removeToCart(game: Game){
     let gameBuscar = this._cartList.find((buscado) => buscado.nombre == game.nombre);
 
-
     if(gameBuscar){
       this._cartList = this._cartList.filter((gameBorrar)=> gameBorrar.nombre !== game.nombre);
     }
     this.cartList.next(this._cartList);
-
   }
 
   addToCart(game: Game) {
@@ -32,9 +30,15 @@ export class GameCartService {
       this._cartList.push({... game});
 
     this.cartList.next(this._cartList);
-
     }
+  }
+  total():number{
+    let total=0
 
+      for (let i in this._cartList) {
+          total+=this._cartList[i].precio;
+      }
+      return total;
   }
 
 }
