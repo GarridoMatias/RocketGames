@@ -17,6 +17,7 @@ import { Game } from './Game';
 export class GameListComponent implements OnInit {
 
   games : Game[] =[];
+
   // gamesParaApi: Game[] = [{
   //   nombre: 'BloodBorne',
   //   imagen: 'https://i.postimg.cc/htdGHvdT/001juego-bloodborne.jpg',
@@ -27,7 +28,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: true,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Harry Potter y la Piedra Filosofal',
@@ -39,7 +40,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Sackboy: A Big Adventure',
@@ -51,7 +52,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Mario Kart',
@@ -63,7 +64,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Plantas & Zombies 3',
@@ -75,7 +76,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Stumble Guys',
@@ -87,7 +88,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'A Game of Thrones',
@@ -99,7 +100,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'God of War',
@@ -111,7 +112,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Minecraft',
@@ -123,7 +124,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // {
   //   nombre: 'Escuadron S6',
@@ -135,7 +136,7 @@ export class GameListComponent implements OnInit {
   //   stock: 20,
   //   destacado: false,
   //   agregado: false,
-  //   cantidad: 0,
+  //   ventas:0,
   // },
   // ];
 
@@ -145,7 +146,7 @@ export class GameListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //SE USO PARA CARGAR MOCKAPI
+    // // SE USO PARA CARGAR MOCKAPI
     // for(let i=0; i<this.gamesParaApi.length;i++){
     //   this.gamesDataService
     //     .addGame(this.gamesParaApi[i])
@@ -170,12 +171,25 @@ export class GameListComponent implements OnInit {
   }
 
   addToCart(game: Game): void {
-    game.agregado= !game.agregado;
+    if(!game.agregado){
+      game.agregado= !game.agregado;
+    }
+
+    game.ventas+=game.cantidad;
+
+    game.stock-=game.cantidad;
     this.cart.addToCart(game);
+    if(game.stock>0){
+      game.cantidad=1;
+
+    }
     this.updateGame(game);
 
-  }
+ }
+
   removeToCart(game:Game):void{
+    game.stock +=game.ventas;
+    game.ventas=0;
     game.agregado= !game.agregado;
     this.cart.removeToCart(game);
     this.updateGame(game);

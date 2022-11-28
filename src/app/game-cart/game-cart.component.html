@@ -8,11 +8,13 @@
     <tr>
         <td>Nombre</td>
         <td>Precio</td>
+        <td>Comprados</td>
 
     </tr>
     <tr *ngFor="let game of games">
         <td>{{game.nombre}}</td>
         <td>{{game.precio | currency}}</td>
+        <td>{{game.ventas}}</td>
 
     </tr>
 </table>

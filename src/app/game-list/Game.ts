@@ -9,4 +9,5 @@ export interface Game{
     stock: number;
     destacado : boolean;
     agregado : boolean;
+    ventas:number;
 }

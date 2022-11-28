@@ -29,14 +29,16 @@ export class GameCartService {
     if(!item){
       this._cartList.push({... game});
 
-    this.cartList.next(this._cartList);
+    }else{
+      item.ventas+=game.cantidad;
     }
+    this.cartList.next(this._cartList);
   }
   total():number{
     let total=0
 
       for (let i in this._cartList) {
-          total+=this._cartList[i].precio;
+          total+=this._cartList[i].precio*this._cartList[i].ventas;
       }
       return total;
   }

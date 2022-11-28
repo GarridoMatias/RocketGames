@@ -22,15 +22,40 @@
                         {{game.tipo}}
                     </span>
                 </p>
-                <!-- <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock" *ngIf="game.stock "></app-input-integer> -->
+
 
                 <p class="card-text" *ngIf="game.agregado">
                     <span class="badge text-bg-info color-white">
                           ADQUIRIDO
                       </span>
                 </p>
-                <button (click)="removeToCart(game)" class="btn btn-danger" *ngIf="game.agregado">Quitar de carrito</button>
-                <button (click)="addToCart(game)" class="btn btn-primary" *ngIf="!game.agregado">Agregar al carrito</button>
+                <div *ngIf="game.stock">
+                    <p style="margin:0 20%; " class="d-flex justify-content-center bg-secondary rounded ">{{game.precio | currency}}</p>
+
+                    <button (click)="addToCart(game) " class="btn btn-primary " *ngIf="!game.agregado ">
+                    Agregar al carrito
+                  </button>
+
+                    <div *ngIf="game.agregado ">
+
+                        <app-input-integer [(cantidad)]="game.cantidad " [max]="game.stock "></app-input-integer>
+
+                        <button (click)="addToCart(game) " class="btn btn-primary ">Regale a sus amigos</button>
+
+                        <button (click)="removeToCart(game) " class="btn btn-danger ">Quitar de carrito</button>
+                    </div>
+
+                </div>
+                <div *ngIf="!game.stock ">
+                    <p class="badge text-bg-danger color-white ">SIN STOCK</p>
+                    <div *ngIf="game.agregado "></div>
+                    <button (click)="removeToCart(game) " class="btn btn-danger ">Quitar de carrito</button>
+
+                </div>
+
+
+
+
             </div>
         </div>
     </div>
