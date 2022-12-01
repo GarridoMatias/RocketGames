@@ -16,10 +16,6 @@ const routes: Routes = [
     component:RocketgamesHomeComponent,
   },
   {
-    path: 'games',
-    component:RocketgamesGamesComponent,
-  },
-  {
     path : 'about',
     component:RocketgamesAboutComponent,
   },

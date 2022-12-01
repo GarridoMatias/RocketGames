@@ -173,6 +173,10 @@ export class GameListComponent implements OnInit {
   addToCart(game: Game): void {
     if(!game.agregado){
       game.agregado= !game.agregado;
+      game.cantidad=1;
+    }
+    if(game.cantidad>game.stock){
+      game.cantidad=game.stock;
     }
 
     game.ventas+=game.cantidad;
@@ -180,7 +184,7 @@ export class GameListComponent implements OnInit {
     game.stock-=game.cantidad;
     this.cart.addToCart(game);
     if(game.stock>0){
-      game.cantidad=1;
+      game.cantidad=0;
 
     }
     this.updateGame(game);
@@ -195,7 +199,12 @@ export class GameListComponent implements OnInit {
     this.updateGame(game);
 
   }
+  maxReached (m: string){
+    alert (m);
+  }
 }
+
+
 
 
 

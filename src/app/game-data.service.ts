@@ -22,7 +22,7 @@ export class GameDataService {
   public getAll():Observable<Game[]>{
     return this.http.get<Game[]>(URL)
               .pipe(
-                tap( (games: Game[])=> games.forEach(game => game.cantidad = 1 ))
+                tap( (games: Game[])=> games.forEach(game => game.cantidad = 0 ))
               );
   }
 

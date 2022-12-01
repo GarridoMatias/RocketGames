@@ -38,7 +38,7 @@
 
                     <div *ngIf="game.agregado ">
 
-                        <app-input-integer [(cantidad)]="game.cantidad " [max]="game.stock "></app-input-integer>
+                        <app-input-integer [(cantidad)]="game.cantidad" [max]="game.stock " (maxReached)="maxReached($event)"></app-input-integer>
 
                         <button (click)="addToCart(game) " class="btn btn-primary ">Regale a sus amigos</button>
 

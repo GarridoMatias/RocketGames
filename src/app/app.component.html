@@ -1,33 +1,35 @@
-<header class="row align-items-center">
-    <div class="col-1">
-        <a href="javascript:void(0)" id="btn-sidebar-menu">
-            <img src="../assets/icons/menu.png" alt="menu" class="i-menu">
-        </a>
-    </div>
+<div class="cuerpo">
+    <header class="row align-items-center">
+        <div class="col-1">
+            <a href="javascript:void(0)" id="btn-sidebar-menu">
+                <img src="../assets/icons/menu.png" alt="menu" class="i-menu">
+            </a>
+        </div>
 
-    <div class="col-2">
+        <div class="col-2">
 
-        <a href="index.html" class="logo">
-            <img src="../assets/logo/logo_Mesa de trabajo 1.png" alt="logo.png">
-        </a>
-    </div>
+            <a href="index.html" class="logo">
+                <img src="../assets/logo/logo_Mesa de trabajo 1.png" alt="logo.png">
+            </a>
+        </div>
 
-    <div class="col-8 row text-center">
-        <a class="col" [routerLink]="['/home']">HOME</a>
-        <a class="col" [routerLink]="['/about']">NOSOTROS</a>
-        <a class="col" [routerLink]="['/contacto']">CONTACTO</a>
-    </div>
-    <div class="col-1 justify-content-end ">
-        <a href=""><img src="../assets/icons/user.png " class="i-user icono "></a>
-        <a href=""><img src="../assets/icons/carrito1.png " class="i-carrito icono "></a>
-    </div>
-</header>
+        <div class="col-8 row text-center">
+            <a class="col" [routerLink]="['/home']">HOME</a>
+            <a class="col" [routerLink]="['/about']">NOSOTROS</a>
+            <a class="col" [routerLink]="['/contacto']">CONTACTO</a>
+        </div>
+        <div class="col-1 justify-content-end ">
+            <a href=""><img src="../assets/icons/user.png " class="i-user icono "></a>
+            <a href=""><img src="../assets/icons/carrito1.png " class="i-carrito icono "></a>
+        </div>
+    </header>
 
-<div>
-    <router-outlet></router-outlet>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>
 
-<footer class="bg-dark text-white ">
+<footer class=" bg-dark text-white ">
 
     <div class="row text-center justify-content-evenly ">
         <div class="col ">
